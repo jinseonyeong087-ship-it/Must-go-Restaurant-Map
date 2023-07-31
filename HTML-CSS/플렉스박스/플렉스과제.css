@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'MICEGothic Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEGothic Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: 'MICEGothic Bold';
+}
+
+nav {
+  background-color: orange;
+}
+
+.nav-container {
+  padding: 2rem 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-contact {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-family: inherit; /*버튼의 폰트를 바꿀 수 있도록 상속을 줌*/
+}
