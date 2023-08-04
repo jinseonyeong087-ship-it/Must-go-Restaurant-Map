@@ -1,0 +1,45 @@
+/* 인포윈도우 설정 */
+@font-face {
+  font-family: 'MICEGothic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEGothic.woff2')
+    format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+.infowindow {
+  width: 20rem;
+  background-color: white;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.infowindow-img-container {
+  width: 100%;
+  overflow: hidden;
+  
+}
+
+.infowindow-img {
+  width: 100%;
+}
+
+.infowindow-title {
+  font-size: 1.7rem;
+  background-color: blanchedalmond;
+}
+
+.infowindow-address {
+  padding-top: 0.6rem;
+  padding-bottom: 0.3rem;
+  font-size: 1.5rem;
+  font-family: 'MICEGothic';
+}
+
+.infowindow-btn {
+  font-size: 1.5rem;
+}
