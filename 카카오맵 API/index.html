@@ -1,59 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>먹방곡곡</title>
-    <meta name="author" content="먹방곡곡" />
-    <meta name="description" content="먹방곡곡 서비스" />
-    <meta name="keywords" content="먹방곡곡, 맛집지도, 유튜버맛집, 맛집유튜버" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="map.css" />
-  </head>
 
-  <body>
-    <nav>
+<head>
+  <script type="text/javascript"
+    src="//dapi.kakao.com/v2/maps/sdk.js?appkey=&libraries=services"></script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>먹방곡곡</title>
+  <meta name="author" content="먹방곡곡" />
+  <meta name="description" content="먹방곡곡 서비스" />
+  <meta name="keywords" content="먹방곡곡, 맛집지도, 유튜버맛집, 맛집유튜버" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="map.css" />
+</head>
+
+<body>
+  <nav>
+    <div class="inner">
+      <div class="nav-container">
+        <h1 class="nav-title">먹방곡곡 - 나만의 맛집지도</h1>
+        <button class="nav-contact">Contact</button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- <section id="category">
       <div class="inner">
-        <div class="nav-container">
-          <h1 class="nav-title">먹방곡곡 - 나만의 맛집지도</h1>
-          <button class="nav-contact">Contact</button>
+        <div class="category-container">
+          <h2 class="category-title">먹방곡곡 월드맵</h2>
         </div>
       </div>
-    </nav>
+    </section> -->
+    <!-- 카테고리 -->
 
-    <main>
-      <section id="category">
-        <div class="inner">
-          <div class="category-container">
-            <h2 class="category-title">먹방곡곡 월드맵</h2>
-            <div class="category-list">
-              <button class="category-item" id="all">전체</button>
-              <button class="category-item" id="korea">한식</button>
-              <button class="category-item" id="china">중식</button>
-              <button class="category-item" id="japan">일식</button>
-              <button class="category-item" id="america">양식</button>
-              <button class="category-item" id="wheat">분식</button>
-              <button class="category-item" id="fast">패스트푸드</button>
-              <button class="category-item" id="chicken">치킨</button>
-              <button class="category-item" id="dessert">디저트</button>
-              <button class="category-item" id="etc">기타</button>
+    <!-- 카카오지도 -->
+    <div id="map">
+
+      <!-- 검색+결과 + 음식분류 -->
+      <div class="top-bar">
+        <!-- 검색 + 결과 -->
+        <div class="search-area">
+          <div class="search-container">
+            <input type="text" id="search-input" placeholder="검색어를 입력하세요" />
+            <button id="search-btn">검색</button>
+          </div>
+
+          <!-- 결과 + 상세정보 나란히 -->
+          <div class="result-info-wrapper">
+            <div class="result-container">
+              <div id="search-result"></div>
+              <button id="toggle-info" class="toggle-info-btn">&gt;</button>
+            </div>
+
+            <div id="info-panel" class="info-panel hidden">
+              <img id="info-img" src="" alt="가게 이미지" />
+              <div class="info-text">
+                <h3 id="info-title"></h3>
+                <a id="info-url" href="#" target="_blank">상세보기</a>
+              </div>
+              <button id="info-close">닫기 ✕</button>
             </div>
           </div>
         </div>
-      </section>
-      <!-- 카테고리 -->
-      <div id="map" class="inner"></div>
 
-      <!-- 카카오지도 -->
-    </main>
 
-    
+        <!-- 음식 분류 -->
+        <div class="category-list">
+          <button class="category-item" id="all">전체</button>
+          <button class="category-item" id="korea">한식</button>
+          <button class="category-item" id="china">중식</button>
+          <button class="category-item" id="japan">일식</button>
+          <button class="category-item" id="america">양식</button>
+          <button class="category-item" id="wheat">분식</button>
+          <button class="category-item" id="fast">패스트푸드</button>
+          <button class="category-item" id="chicken">치킨</button>
+          <button class="category-item" id="dessert">디저트</button>
+          <button class="category-item" id="etc">기타</button>
+        </div>
+      </div>
 
-    <script
-      type="text/javascript"
-      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=102c45d2d7a9c393c912cb4ba5a11a6f&libraries=services"
-    ></script>
-    <script src="script.js"></script>
-  </body>
+    </div>
+
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
